@@ -9,16 +9,16 @@ class Bic < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/gympass/backup-integrity-resource/releases/download/0.1.0/bic_0.1.0_macOS_arm64.tar.gz"
-      sha256 "dbc9b3a752deca918f7f56e8d4a3777d403cebdbb6f896ee052d6dd51a81b39c"
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.0/macOS_bic_arm64.tar.gz"
+      sha256 "dd9dcbed2ad4642a822913448228779b571649728350f83b5531200b4f83ee5c"
 
       def install
         bin.install "bic"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gympass/backup-integrity-resource/releases/download/0.1.0/bic_0.1.0_macOS_64-bit.tar.gz"
-      sha256 "2ea816e80ef41915ffb62ab42e47f734b4c61fbd4d2a0873c02927d17c4c57ce"
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.0/macOS_bic_64-bit.tar.gz"
+      sha256 "9d8fb59cb6031da4945782a3c95b2c8c4f8ced9d90befd9ff8400aea39713db1"
 
       def install
         bin.install "bic"
@@ -28,16 +28,16 @@ class Bic < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gympass/backup-integrity-resource/releases/download/0.1.0/bic_0.1.0_Linux_arm64.tar.gz"
-      sha256 "049c4fdd99a84cae0f523a66d5cb73f8b6ea4a6be9fee777e618a6e4f5db34d9"
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.0/Linux_bic_arm64.tar.gz"
+      sha256 "639d58751e68e5b6260744850c2913b0aab73cc5c552150afac3a049856b4465"
 
       def install
         bin.install "bic"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gympass/backup-integrity-resource/releases/download/0.1.0/bic_0.1.0_Linux_64-bit.tar.gz"
-      sha256 "4fdbbd6f89f956c34f7d9d3b47da00ab68656a2506b3c5bc46e8e01436bdc61b"
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.0/Linux_bic_64-bit.tar.gz"
+      sha256 "90993b55d6fcadd1d4bf63ed6f9a4199f4fe804f7b2b68508e58b27d574e9bb1"
 
       def install
         bin.install "bic"
