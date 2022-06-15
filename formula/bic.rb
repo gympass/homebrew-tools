@@ -5,20 +5,20 @@
 class Bic < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.0/macOS_bic_arm64.tar.gz"
-      sha256 "dd9dcbed2ad4642a822913448228779b571649728350f83b5531200b4f83ee5c"
+    if Hardware::CPU.intel?
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.1/macOS_bic_64-bit.tar.gz"
+      sha256 "b357018ea16a584686715d21ad4112ee1acc83463617470e7d6110e60a33dcc8"
 
       def install
         bin.install "bic"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.0/macOS_bic_64-bit.tar.gz"
-      sha256 "9d8fb59cb6031da4945782a3c95b2c8c4f8ced9d90befd9ff8400aea39713db1"
+    if Hardware::CPU.arm?
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.1/macOS_bic_arm64.tar.gz"
+      sha256 "7e6e776707c3fb87b9d07da15e135ddfa3ced8bda1023b4610fbe16ed115813a"
 
       def install
         bin.install "bic"
@@ -27,17 +27,17 @@ class Bic < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.0/Linux_bic_arm64.tar.gz"
-      sha256 "639d58751e68e5b6260744850c2913b0aab73cc5c552150afac3a049856b4465"
+    if Hardware::CPU.intel?
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.1/Linux_bic_64-bit.tar.gz"
+      sha256 "e8ffad594ea0d8d0898d3685b1ea9a34c4b060c1177bd0162f76d85c2baa57c8"
 
       def install
         bin.install "bic"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.0/Linux_bic_64-bit.tar.gz"
-      sha256 "90993b55d6fcadd1d4bf63ed6f9a4199f4fe804f7b2b68508e58b27d574e9bb1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.1/Linux_bic_arm64.tar.gz"
+      sha256 "92e7043e43d9ced7e2a94173b872663402559f9df4dc5bd98de7b67db10e7426"
 
       def install
         bin.install "bic"
