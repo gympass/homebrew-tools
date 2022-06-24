@@ -5,20 +5,20 @@
 class Bic < Formula
   desc ""
   homepage ""
-  version "0.1.2"
+  version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.2/macOS_bic_arm64.tar.gz"
-      sha256 "5d3e7fb290273886135e841498eaac6c248a11959556feb63c4e3453caa070a0"
+    if Hardware::CPU.intel?
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.2.0/macOS_bic_64-bit.tar.gz"
+      sha256 "c57ce8d75e46ebcdee8d02d45fb9545e33e0969584422e5ef2c28b7c86282e52"
 
       def install
         bin.install "bic"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.2/macOS_bic_64-bit.tar.gz"
-      sha256 "59a1d7b96a304d1a0f996dbdc5a151f2e07728fe6c30ddae581127e610a652f5"
+    if Hardware::CPU.arm?
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.2.0/macOS_bic_arm64.tar.gz"
+      sha256 "5d17a6284bfcd9db3083202f63b890eca0337fbec70ee7e17be39f6948dff674"
 
       def install
         bin.install "bic"
@@ -28,16 +28,16 @@ class Bic < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.2/Linux_bic_arm64.tar.gz"
-      sha256 "6efccfe21aed914d983cc5655c74ff883b5c78cf75ad189428cb4ef31f1bafd8"
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.2.0/Linux_bic_arm64.tar.gz"
+      sha256 "a1af4e2b0a8a6156be9deb5affb55cad9d621f181f3e55d67cd8eea45d7312a8"
 
       def install
         bin.install "bic"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.1.2/Linux_bic_64-bit.tar.gz"
-      sha256 "561eb9c38da0f148ca85873d0810057d96f9877ff7dbe2dc70529e0b290dfb89"
+      url "https://github.com/gympass/backup-integrity-checker/releases/download/0.2.0/Linux_bic_64-bit.tar.gz"
+      sha256 "25bb6f23538877bc26cce74458291b981c9b71ef381b1e4d2fdc3a1d916968f0"
 
       def install
         bin.install "bic"
