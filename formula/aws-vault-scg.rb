@@ -5,20 +5,20 @@
 class AwsVaultScg < Formula
   desc ""
   homepage ""
-  version "0.0.8"
+  version "0.0.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Gympass/aws-vault-scg/releases/download/v0.0.8/aws-vault-scg_0.0.8_Darwin_amd64.tar.gz"
-      sha256 "046073a15cf28ce8912347878288f70bcdd40dba12da1aef3d7392300ed875ef"
+      url "https://github.com/Gympass/aws-vault-scg/releases/download/v0.0.9/aws-vault-scg_0.0.9_Darwin_amd64.tar.gz"
+      sha256 "61d658b8cc5c84e8b0a622d0d631bf8817f0eac05a40a34a4e7800819b8996d6"
 
       def install
         bin.install "aws-vault-scg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Gympass/aws-vault-scg/releases/download/v0.0.8/aws-vault-scg_0.0.8_Darwin_arm64.tar.gz"
-      sha256 "cbf9188e04164429cb925c99a37bc492bf799a20a1db34a5f6a06440aa8d6ea3"
+      url "https://github.com/Gympass/aws-vault-scg/releases/download/v0.0.9/aws-vault-scg_0.0.9_Darwin_arm64.tar.gz"
+      sha256 "a4a6ea088216e01618a3bcef95631555efac092885795a9f0ad7c4645e35017e"
 
       def install
         bin.install "aws-vault-scg"
@@ -28,16 +28,16 @@ class AwsVaultScg < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Gympass/aws-vault-scg/releases/download/v0.0.8/aws-vault-scg_0.0.8_Linux_arm64.tar.gz"
-      sha256 "1ad576cfea54cde8f11649749db21669820c4876ebc83bf88686fdfd2473aeaa"
+      url "https://github.com/Gympass/aws-vault-scg/releases/download/v0.0.9/aws-vault-scg_0.0.9_Linux_arm64.tar.gz"
+      sha256 "8b80e2b2061ec289c69905aae2bd265165d6f3578f64366070ffe82e87885366"
 
       def install
         bin.install "aws-vault-scg"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Gympass/aws-vault-scg/releases/download/v0.0.8/aws-vault-scg_0.0.8_Linux_amd64.tar.gz"
-      sha256 "d65db6dad40c088277c8c044b74cfbf5c49eb1a286c7a0ddf89b0547d9987e23"
+      url "https://github.com/Gympass/aws-vault-scg/releases/download/v0.0.9/aws-vault-scg_0.0.9_Linux_amd64.tar.gz"
+      sha256 "1850e361e6095f61d5e568d100f1c19b0081081c1687b0595e73ac5f8d88d3f9"
 
       def install
         bin.install "aws-vault-scg"
